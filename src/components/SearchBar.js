@@ -3,12 +3,12 @@ import React from 'react';
 class SearchBar extends React.Component {
 	state = { term: 'Search for something' };
 
-	onFormSubmit(event) {
+	onFormSubmit = (event) => {
 		// prevents form from automatically submitting itself
 		event.preventDefault();
 
 		console.log(this.state.term);
-	}
+	};
 
 	render() {
 		return (
