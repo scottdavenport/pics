@@ -1,7 +1,7 @@
 import React from 'react';
 
 class SearchBar extends React.Component {
-	state = { term: 'Search for something' };
+	state = { term: '' };
 
 	onFormSubmit = (event) => {
 		// prevents form from automatically submitting itself
