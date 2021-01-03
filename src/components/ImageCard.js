@@ -8,10 +8,12 @@ class ImageCard extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log(this.imageRef);
-		// we see 0 for the 'clientHeight' because it's called too quickly before the image is downloaded.
-		console.log(this.imageRef.current.clientHeight);
+		this.imageRef.current.addEventListener('load', this.setSpans);
 	}
+
+	setSpans = () => {
+		console.log(this.imageRef.current.clientHeight);
+	};
 
 	render() {
 		const { description, urls } = this.props.image;
